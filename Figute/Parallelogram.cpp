@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+#include "Parallelogram.h"
+
+void Parallelogram::SetDim(double height, double value)
+{
+	Figure::SetDimension(value, value);
+	h = height;
+}
+
+void Parallelogram::ShowArea() const
+{
+	cout << "S: " << m_value1 * h << endl;
+}
+
+void Parallelogram::Init()
+{
+	cout << "Enter side: " << endl;
+	cin >> m_value1;
+	cout << "Enter height: " << endl;
+	cin >> h;
+}
+
+void Parallelogram::Print()
+{
+	cout << "Area:" << endl;
+	ShowArea();
+	cout << "Length:" << endl;
+	ShowLength();
+}
+
+void Parallelogram::ShowLength()
+{
+	cout << m_value1 << endl;
+}
