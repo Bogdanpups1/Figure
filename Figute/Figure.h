@@ -11,9 +11,9 @@ public:
 
     void SetDimension(const double value1);
     void SetDimension(const double value1, const double value2);
-    virtual void ShowArea() const;
-    virtual void ShowPer() const;
-    virtual void Init();
+    virtual void ShowArea() const = 0;
+    virtual void ShowPer() const = 0;
+    virtual void Init() const = 0;
     void Print();
-    virtual void ShowLength();
+    virtual void ShowLength() const = 0;
 };
